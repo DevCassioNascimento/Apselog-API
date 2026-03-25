@@ -1,0 +1,6 @@
+@Apselog.API_HostAddress = http://localhost:5011
+
+GET {{Apselog.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

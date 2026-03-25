@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="src/Apselog.API/Apselog.API.csproj" />
+  <Project Path="src/Apselog.Application/Apselog.Application.csproj" />
+  <Project Path="src/Apselog.Domain/Apselog.Domain.csproj" />
+  <Project Path="src/Apselog.Infrastructure/Apselog.Infrastructure.csproj" />
+</Solution>
