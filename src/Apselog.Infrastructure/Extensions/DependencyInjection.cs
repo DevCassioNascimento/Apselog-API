@@ -1,5 +1,9 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Apselog.Domain.Interfaces.Repositories;
+using Apselog.Infrastructure.Contexts;
+using Apselog.Infrastructure.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 namespace Apselog.Infrastructure.Extensions;
 
@@ -9,7 +13,10 @@ public static class DependencyInjection
         this IServiceCollection services,
         IConfiguration configuration)
     {
-        _ = configuration;
+        services.AddDbContext<ApplicationDbContext>(options =>
+            options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+
+        services.AddScoped<IUserRepository, UserRepository>();
 
         return services;
     }
