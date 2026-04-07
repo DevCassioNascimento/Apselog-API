@@ -11,6 +11,7 @@ public class ApplicationDbContext : DbContext
     }
 
     public DbSet<User> Users => Set<User>();
+    public DbSet<Entrega> Entregas => Set<Entrega>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
