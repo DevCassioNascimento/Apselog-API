@@ -1,3 +1,5 @@
+using Apselog.Domain.Enums;
+
 namespace Apselog.Domain.Entities;
 
 public class EtapaChecklistEntrega
@@ -7,7 +9,7 @@ public class EtapaChecklistEntrega
     public Entrega Entrega { get; set; } = null!;
     public Guid EtapaChecklistModeloId { get; set; }
     public EtapaChecklistModelo EtapaChecklistModelo { get; set; } = null!;
-    public string Status { get; set; } = "PENDENTE";
+    public EtapaChecklistEntregaStatus Status { get; set; } = EtapaChecklistEntregaStatus.Pendente;
     public bool Concluida { get; set; }
     public string? ConcluidaEm { get; set; }
     public Guid? ConcluidaPorUsuarioId { get; set; }

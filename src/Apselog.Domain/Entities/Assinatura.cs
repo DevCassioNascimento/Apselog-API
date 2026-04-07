@@ -1,3 +1,5 @@
+using Apselog.Domain.Enums;
+
 namespace Apselog.Domain.Entities;
 
 public class Assinatura
@@ -9,7 +11,7 @@ public class Assinatura
     public EtapaChecklistEntrega? EtapaChecklistEntrega { get; set; }
     public required string AssinadoPorNome { get; set; }
     public string? AssinadoPorDocumento { get; set; }
-    public required string AssinadoPorTipo { get; set; }
+    public TipoAssinante AssinadoPorTipo { get; set; } = TipoAssinante.Destinatario;
     public string? ImagemBase64 { get; set; }
     public string? ArquivoUrl { get; set; }
     public string? IpOrigem { get; set; }

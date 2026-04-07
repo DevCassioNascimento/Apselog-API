@@ -1,3 +1,5 @@
+using Apselog.Domain.Enums;
+
 namespace Apselog.Domain.Entities;
 
 public class EtapaChecklistModelo
@@ -9,6 +11,6 @@ public class EtapaChecklistModelo
     public int Ordem { get; set; }
     public bool Obrigatoria { get; set; }
     public bool RequerAssinatura { get; set; }
-    public string TipoAssinante { get; set; } = "NENHUM";
+    public TipoAssinante TipoAssinante { get; set; } = TipoAssinante.Nenhum;
     public bool Ativo { get; set; } = true;
 }
